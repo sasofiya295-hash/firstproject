@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Photo – Cherrybox</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="preview-page" data-page="photo">
+
+    <nav class="cherry-navbar">
+        <div class="nav-inner">
+
+            <div class="nav-left">
+                <img src="assets/logo.png" class="navbar-logo">
+            </div>
+
+            <div class="nav-center">
+                <ul class="nav-menu">
+                    <li><a href="index.html" data-page="home" class="nav-link">Home</a></li>
+                    <li><a href="about.html" data-page="about" class="nav-link">About</a></li>
+                    <li><a href="photo.html" data-page="photo" class="nav-link">Photo</a></li>
+                    <li><a href="contact-user.php" data-page="contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-right"></div>
+        </div>
+    </nav>
+
+    <div class="preview-wrapper">
+
+        <img class="print-head" src="assets/print-head.png" alt="printer">
+
+        <div id="print-output">
+            <img id="final-photo">
+        </div>
+
+        <div class="print-ready-text">Your Photo Is Ready!</div>
+
+        <div class="action-buttons">
+            <button class="action-btn share">SHARE</button>
+            <button class="action-btn download">DOWNLOAD</button>
+        </div>
+    </div>
+
+    <audio id="print-sound" src="assets/print-sound.mp3"></audio>
+
+    <script src="js/preview.js"></script>
+
+    <script>
+        const current = document.body.getAttribute("data-page");
+        document.querySelectorAll(".nav-link").forEach(a => {
+            if (a.dataset.page === current) a.classList.add("active-pill");
+        });
+    </script>
+
+</body>
+</html>

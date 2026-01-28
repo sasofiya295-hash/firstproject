@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Take Photos – CherryboX</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="cherry-navbar">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <img src="assets/logo.png" class="navbar-logo">
+    </div>
+    <div class="nav-center">
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="photo.html" class="nav-link active-pill">Photo</a></li>
+       <li><a href="contact-user.php" data-page="contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+    <div class="nav-right"></div>
+  </div>
+</nav>
+
+<!-- CAMERA SECTION -->
+<section class="booth-section">
+
+  <h1 class="booth-title">Take Your Photo</h1>
+  <div class="booth-subtitle">Layout A • Photo 1/1</div>
+
+  <div class="booth-card">
+
+    <!-- LEFT -->
+    <div class="booth-left">
+
+      <!-- BUTTONS ABOVE CAMERA -->
+      <div class="booth-mini-controls">
+        <button class="booth-pill-btn" id="switchCam">Switch Camera</button>
+        <button class="booth-pill-btn" id="mirrorBtn">Mirror On</button>
+      </div>
+
+      <!-- CAMERA FRAME -->
+      <div class="booth-camera-wrapper">
+        <div id="flash" class="booth-flash"></div>
+        <video id="booth-video" autoplay playsinline></video>
+        <div id="countdown" class="booth-countdown"></div>
+      </div>
+
+      <!-- BUTTONS BELOW CAMERA -->
+      <div class="booth-main-buttons">
+        <button class="booth-secondary-btn" id="retakeBtn">Retake</button>
+        <button class="booth-primary-btn" id="captureBtn">Capture</button>
+        <button class="booth-primary-btn" id="doneBtn" style="display:none;">Done</button>
+      </div>
+
+      <!-- FILTERS -->
+      <div class="booth-filters">
+        <span class="booth-label">Filter:</span>
+        <button class="booth-filter-btn booth-active">None</button>
+        <button class="booth-filter-btn">B&W</button>
+        <button class="booth-filter-btn">Sepia</button>
+        <button class="booth-filter-btn">Soft Pastel</button>
+        <button class="booth-filter-btn">Retro</button>
+        <button class="booth-filter-btn">Bright</button>
+      </div>
+
+      <!-- TIMER -->
+      <div class="booth-timer-row">
+        <span class="booth-label">Timer:</span>
+        <button class="booth-timer-btn booth-active">Off</button>
+        <button class="booth-timer-btn">3s</button>
+        <button class="booth-timer-btn">5s</button>
+        <button class="booth-timer-btn">10s</button>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="booth-right">
+      <div class="booth-right-title">Preview shots</div>
+      <div class="booth-thumbs" id="booth-thumbs"></div>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="js/photo-booth.js"></script>
+
+</body>
+</html>
